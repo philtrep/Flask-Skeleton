@@ -80,14 +80,31 @@ Watches for modifications in assets:
 grunt
 ```
 
+### Access the shell
+
+```
+env/bin/python manage.py shell
+```
 
 ### Creating Database
 
 ```
-env/bin/python manage.py shell
-
 # From the Flask shell
 
 from app.config.config import *
 db.create_all()
+```
+
+### Create User
+
+```
+# From the Flask shell
+
+from app.config.config import db
+from app.models.user import *
+
+UserActions.add_user("testteste", "Testtest12")
+user = User.query.one()
+user.active = True
+db.session.commit()
 ```
