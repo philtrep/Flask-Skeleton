@@ -18,10 +18,10 @@ config_path = None
 
 env = os.environ.get('FLASK_ENV')
 
-if env == "dev":
-    config_path = "config_dev.yaml"
-else:
+if env == "prod":
     config_path = "config_prod.yaml"
+else:
+    config_path = "config_dev.yaml"
 
 with open(config_path, 'r') as stream:
     parsed_config = yaml.load(stream)

@@ -5,6 +5,8 @@ from app.manager.seed import seed
 
 migrate = Migrate(app, db)
 
+migrate.init_app(app, db, directory='../../migrations')
+
 manager = Manager(app)
 
 manager.add_command("runserver", server)
