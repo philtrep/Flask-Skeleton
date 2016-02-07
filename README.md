@@ -3,18 +3,36 @@ Adds basic JWT based user auth and sessions to Flask
 
 ## Production
 
-**IMPORTANT: This simple webserver setup is for testing, do NOT use in production!**
+### Requirements
+* Python 3.4+
+* VirtualEnv 12.1+
+
+### Install
+```
+./install.sh
+```
+
+### Run
+```
+./run.sh
+```
+
+## Development
 
 ### Requirements
 * Python 3.4+
 * VirtualEnv 12.1+
-* Nginx
+* NPM 2.8+
+* Node 0.12+
+* Grunt-CLI 0.1.13+
+* Ruby 2.2+
+* Nginx (optional)
 
 ### Install
 ```
-bash install.sh
+./install-dev.sh
 ```
-In the Nginx config:
+Nginx config:
 ```
 user www-data; # Nginx will be ran by this user, should NOT be root
 worker_processes 4; # Number of core on the machine
@@ -46,31 +64,13 @@ http {
     }
 }
 
-```
+``` 
+
+Nginx is used to better simulate the production environment, completely optional of course.
 
 ### Run
 ```
-bash run.sh
-```
-
-## Development
-
-### Requirements
-* Python 3.4+
-* VirtualEnv 12.1+
-* NPM 2.8+
-* Node 0.12+
-* Grunt-CLI 0.1.13+
-* Ruby 2.2+
-
-### Install
-```
-bash install-dev.sh
-```
-
-### Run
-```
-bash run-dev.sh
+./run-dev.sh
 ```
 
 ### Assets compilation
