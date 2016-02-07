@@ -1,4 +1,4 @@
-from app.models.relationships import roles_users
+# from app.models.relationships import roles_users
 from app.constants import ROLES
 import bcrypt
 import re

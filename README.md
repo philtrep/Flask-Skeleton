@@ -79,3 +79,15 @@ Watches for modifications in assets:
 ```
 grunt
 ```
+
+
+### Creating Database
+
+```
+env/bin/python manage.py shell
+
+# From the Flask shell
+
+from app.config.config import *
+db.create_all()
+```
